@@ -22,7 +22,7 @@ function setup() {
     palette.push(color((hueValue + hueOffset + 360) % 360, satValue, 100));
   }
   
-  noLoop();
+  //noLoop();
 }
 
 function draw() {
@@ -34,13 +34,14 @@ function draw() {
     if (!cell || cell.length < 3) continue;
     
     fill(palette[i]);
-    stroke(0);
-    strokeWeight(1);
+    stroke(255);
+    strokeWeight(10);
     
     beginShape();
     for (let j = 0; j < cell.length; j++) {
       vertex(cell[j][0], cell[j][1]);
     }
+    
     endShape(CLOSE);
   }
 
